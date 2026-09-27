@@ -81,7 +81,7 @@ runs:
 
     - name: Create Code Coverage Badge
       id: create_code_coverage_badge
-      if: ${{ inputs.coverage_badge_gist_token != '' && inputs.coverage_badge_gist_id != '' }}
+      if: ${{ inputs.coverage_badge_gist_token != '' && inputs.coverage_badge_gist_id != '' && inputs.coverage_total != '' }}
       uses: schneegans/dynamic-badges-action@v1.8.0
       with:
         auth: ${{ inputs.coverage_badge_gist_token }}
