@@ -168,4 +168,4 @@ runs:
       env:
         UV_PUBLISH_TOKEN: ${{ inputs.pypi_publish_token }}
       run: |-
-        uv publish --token "${{ inputs.pypi_publish_token }}" --verbose
+        uv publish --token "${UV_PUBLISH_TOKEN}" --verbose
